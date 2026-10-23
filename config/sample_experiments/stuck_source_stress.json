@@ -1,0 +1,1 @@
+{"trials": 30, "seed": 7, "groups": ["ecdsa_defense", "rsa_defense"], "fault_mode": "stuck", "fault_probability": 0.5, "max_regen": 2, "signatures_per_session": 20, "rsa_keys_per_population": 8}

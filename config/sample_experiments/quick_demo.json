@@ -1,0 +1,1 @@
+{"trials": 10, "seed": 42, "groups": ["entropy_samples", "ecdsa_attack", "ecdsa_defense", "rsa_defense"], "signatures_per_session": 15, "rsa_keys_per_population": 8}

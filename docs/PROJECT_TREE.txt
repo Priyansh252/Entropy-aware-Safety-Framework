@@ -1,0 +1,83 @@
+entropy-aware-safety-framework/
+├── .env.example
+├── .gitignore
+├── PROJECT_GUIDE.md
+├── README.md
+├── backend
+│   ├── __init__.py
+│   ├── app.py
+│   ├── config.py
+│   ├── core
+│   │   ├── __init__.py
+│   │   ├── adaptive_selector.py
+│   │   ├── ecdsa_lab.py
+│   │   ├── entropy.py
+│   │   ├── experiments.py
+│   │   ├── metrics.py
+│   │   ├── risk_engine.py
+│   │   ├── rsa_lab.py
+│   │   └── safety_layer.py
+│   ├── routes
+│   │   ├── __init__.py
+│   │   └── api.py
+│   ├── storage
+│   │   ├── __init__.py
+│   │   └── db.py
+│   └── tests
+│       ├── __init__.py
+│       ├── conftest.py
+│       ├── test_api_db_experiments.py
+│       ├── test_ecdsa_lab.py
+│       ├── test_entropy_metrics.py
+│       ├── test_risk_and_safety.py
+│       └── test_rsa_lab.py
+├── config
+│   └── sample_experiments
+│       ├── README.md
+│       ├── full_protocol.json
+│       ├── quick_demo.json
+│       └── stuck_source_stress.json
+├── data
+│   └── .gitkeep
+├── docs
+│   ├── ARCHITECTURE.md
+│   ├── LIMITATIONS.md
+│   ├── METHODOLOGY.md
+│   ├── PROJECT_TREE.txt
+│   ├── RISK_MODEL.md
+│   ├── SAMPLE_EXPERIMENT_REPORT.md
+│   ├── sample_raw_results.csv
+│   └── sample_summary.json
+├── frontend
+│   ├── dist
+│   │   └── index.html
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── api.js
+│   │   ├── components
+│   │   │   └── ui.jsx
+│   │   ├── main.jsx
+│   │   ├── pages
+│   │   │   ├── Audit.jsx
+│   │   │   ├── Ecdsa.jsx
+│   │   │   ├── Entropy.jsx
+│   │   │   ├── Experiments.jsx
+│   │   │   ├── Methodology.jsx
+│   │   │   ├── Overview.jsx
+│   │   │   ├── Rsa.jsx
+│   │   │   └── Safety.jsx
+│   │   └── styles.css
+│   └── vite.config.js
+├── requirements-dev.txt
+├── requirements.txt
+├── run_dev.bat
+├── run_project.bat
+├── run_project.sh
+├── run_tests.bat
+├── run_tests.sh
+├── scripts
+│   └── make_report.py
+└── setup.bat

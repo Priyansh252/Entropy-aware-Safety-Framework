@@ -1,0 +1,1056 @@
+{
+  "experiment_id": "exp-de0cca7d",
+  "params": {
+    "trials": 100,
+    "seed": 42,
+    "fault_probability": 0.15,
+    "fault_mode": "intermittent_repeat",
+    "signatures_per_session": 20,
+    "rsa_keys_per_population": 12,
+    "collection_size": 12,
+    "key_bits": 1024,
+    "max_regen": 3,
+    "sample_size": 4096,
+    "groups": [
+      "entropy_samples",
+      "ecdsa_attack",
+      "ecdsa_defense",
+      "rsa_batch_gcd",
+      "rsa_defense",
+      "threshold_sensitivity",
+      "overhead",
+      "adaptive_policy"
+    ]
+  },
+  "groups": {
+    "entropy_samples": {
+      "metrics": {
+        "uniform": {
+          "shannon_bits": {
+            "n": 100,
+            "mean": 7.9547901,
+            "median": 7.955135,
+            "std": 0.004013117505270829,
+            "min": 7.94517,
+            "max": 7.96329,
+            "p95": 7.96113,
+            "ci_low": 7.9540035289689675,
+            "ci_high": 7.955576671031033
+          },
+          "low_entropy_flag_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          },
+          "repeated_block_flag_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          }
+        },
+        "constant": {
+          "shannon_bits": {
+            "n": 100,
+            "mean": 0.0,
+            "median": 0.0,
+            "std": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "p95": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0
+          },
+          "low_entropy_flag_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          },
+          "repeated_block_flag_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          }
+        },
+        "biased": {
+          "shannon_bits": {
+            "n": 100,
+            "mean": 6.7760804,
+            "median": 6.7737300000000005,
+            "std": 0.031216397948009376,
+            "min": 6.69996,
+            "max": 6.84633,
+            "p95": 6.82769,
+            "ci_low": 6.76996198600219,
+            "ci_high": 6.78219881399781
+          },
+          "low_entropy_flag_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          },
+          "repeated_block_flag_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          }
+        },
+        "repeated_pattern": {
+          "shannon_bits": {
+            "n": 100,
+            "mean": 2.9565564,
+            "median": 3.0,
+            "std": 0.1055064348415285,
+            "min": 2.40564,
+            "max": 3.0,
+            "p95": 3.0,
+            "ci_low": 2.9358771387710605,
+            "ci_high": 2.97723566122894
+          },
+          "low_entropy_flag_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          },
+          "repeated_block_flag_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          }
+        },
+        "repeated_values": {
+          "shannon_bits": {
+            "n": 100,
+            "mean": 3.951422,
+            "median": 3.9967449999999998,
+            "std": 0.06997216895511263,
+            "min": 3.74229,
+            "max": 3.9989,
+            "p95": 3.99866,
+            "ci_low": 3.937707454884798,
+            "ci_high": 3.965136545115202
+          },
+          "low_entropy_flag_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          },
+          "repeated_block_flag_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          }
+        },
+        "nonce_reuse": {
+          "shannon_bits": {
+            "n": 100,
+            "mean": 7.8855853,
+            "median": 7.88508,
+            "std": 0.010988241231591025,
+            "min": 7.85762,
+            "max": 7.91523,
+            "p95": 7.90218,
+            "ci_low": 7.883431604718608,
+            "ci_high": 7.887738995281391
+          },
+          "low_entropy_flag_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          },
+          "repeated_block_flag_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          }
+        }
+      },
+      "headline": {
+        "uniform_mean_bits": 7.9547901,
+        "nonce_reuse_mean_bits": 7.8855853,
+        "nonce_reuse_low_entropy_flag_rate": 0.0,
+        "nonce_reuse_repeated_block_flag_rate": 1.0
+      },
+      "notes": [
+        "Byte-level entropy does not detect repeated nonces (their bytes look uniform); a block-repeat/signature check does.",
+        "Samples are synthetic; 'uniform' here is seeded for repeatability and is not a security-grade source."
+      ],
+      "label": "Uniform vs biased vs repeated byte samples",
+      "evidence_type": "measured (synthetic samples)",
+      "effective_trials": 100,
+      "duration_s": 1.248,
+      "raw_rows": 600
+    },
+    "ecdsa_attack": {
+      "metrics": {
+        "attack_success_normal": {
+          "k": 0,
+          "n": 100,
+          "rate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.03699480747600191
+        },
+        "attack_success_reused": {
+          "k": 100,
+          "n": 100,
+          "rate": 1.0,
+          "ci_low": 0.9630051925239981,
+          "ci_high": 0.9999999999999999
+        },
+        "detection": {
+          "tp": 100,
+          "fp": 0,
+          "tn": 100,
+          "fn": 0,
+          "detection_rate": {
+            "k": 100,
+            "n": 100,
+            "rate": 1.0,
+            "ci_low": 0.9630051925239981,
+            "ci_high": 0.9999999999999999
+          },
+          "false_positive_rate": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          },
+          "precision": 1.0,
+          "accuracy": 1.0
+        },
+        "signature_verification_rate": {
+          "k": 200,
+          "n": 200,
+          "rate": 1.0,
+          "ci_low": 0.9811539940816791,
+          "ci_high": 1.0
+        }
+      },
+      "headline": {
+        "attack_success_normal": 0.0,
+        "attack_success_reused": 1.0
+      },
+      "notes": [
+        "Detection here is signature-based (equal r), not entropy-based."
+      ],
+      "label": "ECDSA: normal vs reused nonces (attack, detection)",
+      "evidence_type": "measured",
+      "effective_trials": 100,
+      "duration_s": 0.086,
+      "raw_rows": 200
+    },
+    "ecdsa_defense": {
+      "metrics": {
+        "baseline": {
+          "sessions": 100,
+          "signatures": 2000,
+          "sessions_compromised": {
+            "k": 97,
+            "n": 100,
+            "rate": 0.97,
+            "ci_low": 0.915479219195973,
+            "ci_high": 0.9897456617765851
+          },
+          "vulnerable_signatures_accepted": 287,
+          "vulnerable_signature_rate": {
+            "k": 287,
+            "n": 2000,
+            "rate": 0.1435,
+            "ci_low": 0.12881804588973608,
+            "ci_high": 0.15954885895942963
+          },
+          "signatures_verified": {
+            "k": 2000,
+            "n": 2000,
+            "rate": 1.0,
+            "ci_low": 0.9980828823994873,
+            "ci_high": 1.0
+          },
+          "candidates_generated": 2000,
+          "candidates_rejected": 0,
+          "regenerations": 0,
+          "fallbacks": 0,
+          "rejected_operations": 0,
+          "injected_faults": 287,
+          "false_rejection_rate": {
+            "k": 0,
+            "n": 1713,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0022375972250439405
+          },
+          "time_ms_per_signature": {
+            "n": 2000,
+            "mean": 0.10237943599983623,
+            "median": 0.08878950001189878,
+            "std": 0.041334525828674945,
+            "min": 0.06771900001467657,
+            "max": 0.9739379999587072,
+            "p95": 0.16013200001907535,
+            "ci_low": 0.10056787053225173,
+            "ci_high": 0.10419100146742073
+          }
+        },
+        "guard": {
+          "sessions": 100,
+          "signatures": 2000,
+          "sessions_compromised": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          },
+          "vulnerable_signatures_accepted": 0,
+          "vulnerable_signature_rate": {
+            "k": 0,
+            "n": 2000,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0019171176005129348
+          },
+          "signatures_verified": {
+            "k": 2000,
+            "n": 2000,
+            "rate": 1.0,
+            "ci_low": 0.9980828823994873,
+            "ci_high": 1.0
+          },
+          "candidates_generated": 2346,
+          "candidates_rejected": 347,
+          "regenerations": 346,
+          "fallbacks": 1,
+          "rejected_operations": 0,
+          "injected_faults": 347,
+          "false_rejection_rate": {
+            "k": 0,
+            "n": 1999,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0019180747993251188
+          },
+          "time_ms_per_signature": {
+            "n": 2000,
+            "mean": 0.41744350200050917,
+            "median": 0.3786094999895795,
+            "std": 0.1422480500278976,
+            "min": 0.2816940000229806,
+            "max": 2.72268300000178,
+            "p95": 0.6263109999622429,
+            "ci_low": 0.4112092063337374,
+            "ci_high": 0.4236777976672809
+          },
+          "overhead_vs_baseline_pct": 307.7415527090586
+        },
+        "deterministic": {
+          "sessions": 100,
+          "signatures": 2000,
+          "sessions_compromised": {
+            "k": 0,
+            "n": 100,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.03699480747600191
+          },
+          "vulnerable_signatures_accepted": 0,
+          "vulnerable_signature_rate": {
+            "k": 0,
+            "n": 2000,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0019171176005129348
+          },
+          "signatures_verified": {
+            "k": 2000,
+            "n": 2000,
+            "rate": 1.0,
+            "ci_low": 0.9980828823994873,
+            "ci_high": 1.0
+          },
+          "candidates_generated": 2000,
+          "candidates_rejected": 0,
+          "regenerations": 0,
+          "fallbacks": 0,
+          "rejected_operations": 0,
+          "injected_faults": 0,
+          "false_rejection_rate": {
+            "k": 0,
+            "n": 2000,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0019171176005129348
+          },
+          "time_ms_per_signature": {
+            "n": 2000,
+            "mean": 0.05800310650030838,
+            "median": 0.04727500001422413,
+            "std": 0.033296080162025954,
+            "min": 0.0400520000312099,
+            "max": 0.8892769999988559,
+            "p95": 0.1023359999976492,
+            "ci_low": 0.05654384144722756,
+            "ci_high": 0.059462371553389196
+          },
+          "overhead_vs_baseline_pct": -43.34496382613286
+        }
+      },
+      "headline": {
+        "baseline_attack_success_rate": 0.97,
+        "defended_attack_success_rate": 0.0,
+        "deterministic_attack_success_rate": 0.0
+      },
+      "parameters": {
+        "fault_mode": "intermittent_repeat",
+        "fault_probability": 0.15,
+        "signatures_per_session": 20
+      },
+      "notes": [
+        "Fault model is simulated: the source re-emits its previous nonce with the stated probability.",
+        "'Attack success' = an attacker holding all session signatures and the public key recovers the private key.",
+        "False rejection = rejected candidates that were not injected repeats / non-faulty candidates."
+      ],
+      "label": "ECDSA: baseline vs defended signing under nonce faults",
+      "evidence_type": "measured on a simulated fault model",
+      "effective_trials": 100,
+      "duration_s": 1.827,
+      "raw_rows": 300
+    },
+    "rsa_batch_gcd": {
+      "metrics": {
+        "modulus_level": {
+          "tp": 600,
+          "fp": 0,
+          "tn": 1800,
+          "fn": 0,
+          "detection_rate": {
+            "k": 600,
+            "n": 600,
+            "rate": 1.0,
+            "ci_low": 0.9936380666717896,
+            "ci_high": 1.0
+          },
+          "false_positive_rate": {
+            "k": 0,
+            "n": 1800,
+            "rate": 0.0,
+            "ci_low": 2.168404344971009e-19,
+            "ci_high": 0.002129677018203815
+          },
+          "precision": 1.0,
+          "accuracy": 1.0
+        },
+        "collection_flagged_normal": {
+          "k": 0,
+          "n": 100,
+          "rate": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.03699480747600191
+        },
+        "collection_flagged_vulnerable": {
+          "k": 100,
+          "n": 100,
+          "rate": 1.0,
+          "ci_low": 0.9630051925239981,
+          "ci_high": 0.9999999999999999
+        },
+        "factor_recovery_verified": {
+          "k": 600,
+          "n": 600,
+          "rate": 1.0,
+          "ci_low": 0.9936380666717896,
+          "ci_high": 1.0
+        },
+        "batch_vs_pairwise_agreement": {
+          "k": 200,
+          "n": 200,
+          "rate": 1.0,
+          "ci_low": 0.9811539940816791,
+          "ci_high": 1.0
+        },
+        "batch_gcd_ms": {
+          "n": 200,
+          "mean": 0.7984928399994828,
+          "median": 0.751821000022801,
+          "std": 0.16174328930516824,
+          "min": 0.6840529999863065,
+          "max": 2.384753000001183,
+          "p95": 1.0805089999621487,
+          "ci_low": 0.7760763637703788,
+          "ci_high": 0.8209093162285869
+        },
+        "pairwise_ms": {
+          "n": 200,
+          "mean": 0.9566536899976086,
+          "median": 0.916364499971678,
+          "std": 0.12960906730469746,
+          "min": 0.8635450000156197,
+          "max": 2.2625720000064575,
+          "p95": 1.1325070000225423,
+          "ci_low": 0.9386907897203032,
+          "ci_high": 0.974616590274914
+        }
+      },
+      "headline": {
+        "detection_rate": 1.0,
+        "false_positive_rate": 0.0
+      },
+      "notes": [
+        "Batch GCD is a population-level audit: it detects sharing only among the moduli supplied.",
+        "Collections of 12 keys at 1024 bits (educational size)."
+      ],
+      "label": "RSA: normal vs shared-prime collections, batch-GCD accuracy",
+      "evidence_type": "measured",
+      "effective_trials": 100,
+      "duration_s": 15.751,
+      "raw_rows": 200
+    },
+    "rsa_defense": {
+      "metrics": {
+        "baseline": {
+          "populations": 30,
+          "accepted_rsa_keys": 360,
+          "vulnerable_final_keys": 92,
+          "vulnerable_final_rate": {
+            "k": 92,
+            "n": 360,
+            "rate": 0.25555555555555554,
+            "ci_low": 0.21324361197272476,
+            "ci_high": 0.30302940353732133
+          },
+          "keys_factored_by_batch_gcd": {
+            "k": 92,
+            "n": 360,
+            "rate": 0.25555555555555554,
+            "ci_low": 0.21324361197272476,
+            "ci_high": 0.30302940353732133
+          },
+          "populations_with_any_vulnerable": {
+            "k": 24,
+            "n": 30,
+            "rate": 0.8,
+            "ci_low": 0.6269395261897256,
+            "ci_high": 0.9049502189759876
+          },
+          "candidates_generated": 360,
+          "candidates_rejected": 0,
+          "regenerations": 0,
+          "fallbacks": 0,
+          "rejected_operations": 0,
+          "injected_faults": 53,
+          "time_ms_per_key": {
+            "n": 360,
+            "mean": 0.0017644333322803301,
+            "median": 0.0012444999981653382,
+            "std": 0.001346339381651542,
+            "min": 0.0010090000159834744,
+            "max": 0.018721999992976635,
+            "p95": 0.004154000009748415,
+            "ci_low": 0.001625355033260012,
+            "ci_high": 0.0019035116313006484
+          }
+        },
+        "defended": {
+          "populations": 30,
+          "accepted_rsa_keys": 360,
+          "vulnerable_final_keys": 0,
+          "vulnerable_final_rate": {
+            "k": 0,
+            "n": 360,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.010558440816003448
+          },
+          "keys_factored_by_batch_gcd": {
+            "k": 0,
+            "n": 360,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.010558440816003448
+          },
+          "populations_with_any_vulnerable": {
+            "k": 0,
+            "n": 30,
+            "rate": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.113517091390478
+          },
+          "candidates_generated": 408,
+          "candidates_rejected": 48,
+          "regenerations": 48,
+          "fallbacks": 0,
+          "rejected_operations": 0,
+          "injected_faults": 49,
+          "time_ms_per_key": {
+            "n": 360,
+            "mean": 19.16047267499989,
+            "median": 16.653618499987033,
+            "std": 7.097418177899611,
+            "min": 15.181715999972312,
+            "max": 66.43314199999395,
+            "p95": 33.246192000035535,
+            "ci_low": 18.427301781337626,
+            "ci_high": 19.893643568662156
+          },
+          "overhead_vs_baseline_pct": 1085827.8344190626
+        }
+      },
+      "headline": {
+        "baseline_attack_success_rate": 0.25555555555555554,
+        "defended_attack_success_rate": 0.0,
+        "baseline_vulnerable_final_rate": 0.25555555555555554,
+        "defended_vulnerable_final_rate": 0.0
+      },
+      "parameters": {
+        "fault_mode": "intermittent_repeat",
+        "fault_probability": 0.15,
+        "keys_per_population": 12
+      },
+      "notes": [
+        "Primes come from a pool of library-generated primes; the faulty source re-uses earlier-issued primes (simulated).",
+        "Generation-time validation compares each candidate to the moduli already accepted; it is not a proof of safety against keys it has never seen.",
+        "A faulty candidate re-using a prime of an earlier *rejected* candidate shares nothing with any accepted key and may legitimately be accepted.",
+        "TIMING CAVEAT: primes are pre-generated, so the baseline time excludes key generation and the percentage overhead here is NOT meaningful. Use the 'overhead' group (validation vs real key generation)."
+      ],
+      "label": "RSA: baseline vs defended key generation under prime-reuse faults",
+      "evidence_type": "measured on a simulated fault model",
+      "effective_trials": 30,
+      "duration_s": 7.044,
+      "raw_rows": 60
+    },
+    "threshold_sensitivity": {
+      "metrics": {
+        "grid": [
+          {
+            "profile": "default",
+            "threshold": 25,
+            "detection_rate": 1.0,
+            "false_rejection_rate": 0.5032786885245901,
+            "precision": 0.5595408895265424,
+            "tp": 390,
+            "fp": 307,
+            "tn": 303,
+            "fn": 0,
+            "eval_ms_per_context": 0.0453
+          },
+          {
+            "profile": "default",
+            "threshold": 35,
+            "detection_rate": 0.9282051282051282,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 362,
+            "fp": 0,
+            "tn": 610,
+            "fn": 28,
+            "eval_ms_per_context": 0.0353
+          },
+          {
+            "profile": "default",
+            "threshold": 50,
+            "detection_rate": 0.37948717948717947,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 148,
+            "fp": 0,
+            "tn": 610,
+            "fn": 242,
+            "eval_ms_per_context": 0.0343
+          },
+          {
+            "profile": "default",
+            "threshold": 65,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0345
+          },
+          {
+            "profile": "default",
+            "threshold": 80,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0348
+          },
+          {
+            "profile": "entropy_heavy",
+            "threshold": 25,
+            "detection_rate": 0.8948717948717949,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 349,
+            "fp": 0,
+            "tn": 610,
+            "fn": 41,
+            "eval_ms_per_context": 0.0368
+          },
+          {
+            "profile": "entropy_heavy",
+            "threshold": 35,
+            "detection_rate": 0.8051282051282052,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 314,
+            "fp": 0,
+            "tn": 610,
+            "fn": 76,
+            "eval_ms_per_context": 0.0552
+          },
+          {
+            "profile": "entropy_heavy",
+            "threshold": 50,
+            "detection_rate": 0.7230769230769231,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 282,
+            "fp": 0,
+            "tn": 610,
+            "fn": 108,
+            "eval_ms_per_context": 0.0408
+          },
+          {
+            "profile": "entropy_heavy",
+            "threshold": 65,
+            "detection_rate": 0.6897435897435897,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 269,
+            "fp": 0,
+            "tn": 610,
+            "fn": 121,
+            "eval_ms_per_context": 0.0357
+          },
+          {
+            "profile": "entropy_heavy",
+            "threshold": 80,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0357
+          },
+          {
+            "profile": "source_heavy",
+            "threshold": 25,
+            "detection_rate": 1.0,
+            "false_rejection_rate": 0.5032786885245901,
+            "precision": 0.5595408895265424,
+            "tp": 390,
+            "fp": 307,
+            "tn": 303,
+            "fn": 0,
+            "eval_ms_per_context": 0.036
+          },
+          {
+            "profile": "source_heavy",
+            "threshold": 35,
+            "detection_rate": 1.0,
+            "false_rejection_rate": 0.5032786885245901,
+            "precision": 0.5595408895265424,
+            "tp": 390,
+            "fp": 307,
+            "tn": 303,
+            "fn": 0,
+            "eval_ms_per_context": 0.0366
+          },
+          {
+            "profile": "source_heavy",
+            "threshold": 50,
+            "detection_rate": 0.8666666666666667,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 338,
+            "fp": 0,
+            "tn": 610,
+            "fn": 52,
+            "eval_ms_per_context": 0.0364
+          },
+          {
+            "profile": "source_heavy",
+            "threshold": 65,
+            "detection_rate": 0.37948717948717947,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 148,
+            "fp": 0,
+            "tn": 610,
+            "fn": 242,
+            "eval_ms_per_context": 0.0352
+          },
+          {
+            "profile": "source_heavy",
+            "threshold": 80,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0351
+          },
+          {
+            "profile": "flat",
+            "threshold": 25,
+            "detection_rate": 0.9512820512820512,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 371,
+            "fp": 0,
+            "tn": 610,
+            "fn": 19,
+            "eval_ms_per_context": 0.036
+          },
+          {
+            "profile": "flat",
+            "threshold": 35,
+            "detection_rate": 0.7615384615384615,
+            "false_rejection_rate": 0.0,
+            "precision": 1.0,
+            "tp": 297,
+            "fp": 0,
+            "tn": 610,
+            "fn": 93,
+            "eval_ms_per_context": 0.0351
+          },
+          {
+            "profile": "flat",
+            "threshold": 50,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0348
+          },
+          {
+            "profile": "flat",
+            "threshold": 65,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0355
+          },
+          {
+            "profile": "flat",
+            "threshold": 80,
+            "detection_rate": 0.0,
+            "false_rejection_rate": 0.0,
+            "precision": null,
+            "tp": 0,
+            "fp": 0,
+            "tn": 610,
+            "fn": 390,
+            "eval_ms_per_context": 0.0353
+          }
+        ],
+        "contexts": 1000,
+        "vulnerable_contexts": 390
+      },
+      "headline": {
+        "default_threshold_50": {
+          "profile": "default",
+          "threshold": 50,
+          "detection_rate": 0.37948717948717947,
+          "false_rejection_rate": 0.0,
+          "precision": 1.0,
+          "tp": 148,
+          "fp": 0,
+          "tn": 610,
+          "fn": 242,
+          "eval_ms_per_context": 0.0343
+        }
+      },
+      "notes": [
+        "SIMULATED contexts constructed by this experiment; not field data.",
+        "Only soft factors are in play here (no confirmed hard-fail evidence): this measures how well the *score alone* separates weak from healthy sources.",
+        "Confirmed nonce reuse / shared primes are caught by hard-fail rules independent of any threshold."
+      ],
+      "label": "Risk-score threshold & weight sensitivity / false rejection",
+      "evidence_type": "simulated contexts (synthetic)",
+      "effective_trials": 100,
+      "duration_s": 1.229,
+      "raw_rows": 1000
+    },
+    "overhead": {
+      "metrics": {
+        "signing_ms": {
+          "ecdsa_library_random": {
+            "n": 100,
+            "mean": 0.04714990100029581,
+            "median": 0.045209699999304576,
+            "std": 0.010640401979466842,
+            "min": 0.03383140000323692,
+            "max": 0.08538299999827359,
+            "p95": 0.07019619999937277,
+            "ci_low": 0.045064382212320314,
+            "ci_high": 0.04923541978827131
+          },
+          "ecdsa_library_deterministic": {
+            "n": 100,
+            "mean": 0.05299120799980983,
+            "median": 0.0462600500014787,
+            "std": 0.018457038786266023,
+            "min": 0.040764099998114034,
+            "max": 0.1317207999989023,
+            "p95": 0.08723889999942003,
+            "ci_low": 0.049373628397701694,
+            "ci_high": 0.05660878760191797
+          },
+          "ecdsa_raw_nonce_baseline": {
+            "n": 100,
+            "mean": 0.09982277200026601,
+            "median": 0.08423799999945913,
+            "std": 0.042812417342441546,
+            "min": 0.07092700000157492,
+            "max": 0.3107319000037023,
+            "p95": 0.16483950000178993,
+            "ci_low": 0.09143153820114747,
+            "ci_high": 0.10821400579938456
+          },
+          "ecdsa_guarded_signing": {
+            "n": 100,
+            "mean": 0.37981222200016873,
+            "median": 0.3280254000003424,
+            "std": 0.11719897157768248,
+            "min": 0.305868099997042,
+            "max": 0.765011499998991,
+            "p95": 0.677453800000194,
+            "ci_low": 0.35684122357094294,
+            "ci_high": 0.4027832204293945
+          }
+        },
+        "signing_overhead_vs_raw_pct": {
+          "ecdsa_library_random": -52.76638781362416,
+          "ecdsa_library_deterministic": -46.91471000257474,
+          "ecdsa_raw_nonce_baseline": 0.0,
+          "ecdsa_guarded_signing": 280.48655070323696
+        },
+        "rsa_keygen_ms": {
+          "n": 60,
+          "mean": 9.538940599993376,
+          "median": 9.099032499989335,
+          "std": 2.0803406815511476,
+          "min": 6.559401000004073,
+          "max": 15.534374000026219,
+          "p95": 13.62130199999001,
+          "ci_low": 9.012541778806465,
+          "ci_high": 10.065339421180287
+        },
+        "rsa_validation_ms": {
+          "n": 60,
+          "mean": 16.5728143999966,
+          "median": 16.31464249999226,
+          "std": 1.3587909763522492,
+          "min": 15.372824999985824,
+          "max": 24.732298999992963,
+          "p95": 19.13451000001487,
+          "ci_low": 16.22899284493384,
+          "ci_high": 16.91663595505936
+        },
+        "rsa_validation_overhead_pct": 173.73852186487156,
+        "throughput_signs_per_s": {
+          "ecdsa_library_random": 21208.952273170755,
+          "ecdsa_library_deterministic": 18871.054987151616,
+          "ecdsa_raw_nonce_baseline": 10017.754265503017,
+          "ecdsa_guarded_signing": 2632.8799919439025
+        }
+      },
+      "headline": {
+        "guarded_vs_raw_pct": 280.48655070323696,
+        "rsa_validation_overhead_pct": 173.73852186487156
+      },
+      "notes": [
+        "Wall-clock timings on this machine; they include Python overhead and vary by hardware/load.",
+        "RSA key generation is timed for min(trials, 60) keys because it is the slowest step.",
+        "'raw nonce baseline' uses the educational chosen-nonce signer, which does its own modular arithmetic around OpenSSL."
+      ],
+      "label": "Key-generation, validation and signing overhead",
+      "evidence_type": "measured (this machine)",
+      "effective_trials": 100,
+      "duration_s": 2.151,
+      "raw_rows": 100
+    },
+    "adaptive_policy": {
+      "metrics": {
+        "scenarios": 405,
+        "selected_counts": {
+          "ecdsa_p256_det": 24,
+          "rsa_2048_pss": 12,
+          "ed25519": 6,
+          "ecdsa_p384_det": 30,
+          "rsa_4096_pss": 12,
+          "rsa_3072_pss": 12,
+          "rsa_2048_oaep": 24,
+          "rsa_3072_oaep": 48,
+          "x25519": 10,
+          "ecdh_p256": 8,
+          "ecdh_p384": 15
+        },
+        "no_eligible_configuration": 204,
+        "selections_below_required_security": 0
+      },
+      "headline": {
+        "scenarios": 405,
+        "selections_below_required_security": 0,
+        "no_eligible": 204
+      },
+      "notes": [
+        "Invariant checked over every scenario: the selected configuration never has less security than required.",
+        "'NONE' means no vetted configuration satisfies all constraints; the selector refuses instead of weakening them."
+      ],
+      "label": "Adaptive selection under security/performance/compatibility requirements",
+      "evidence_type": "measured (policy enumeration)",
+      "effective_trials": 1,
+      "duration_s": 0.012,
+      "raw_rows": 405
+    }
+  },
+  "environment": {
+    "python": "3.12.3",
+    "cryptography": "46.0.6",
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39"
+  },
+  "protocol": "Fixed protocol: per group, N independent trials; seeds control synthetic choices only; CIs are 95% Wilson (proportions) or normal-approximation (means). Educational key sizes; results are measurements of this implementation on simulated fault models, not evidence of production security."
+}

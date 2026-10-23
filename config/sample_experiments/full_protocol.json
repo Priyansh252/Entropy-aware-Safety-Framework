@@ -1,0 +1,1 @@
+{"trials": 100, "seed": 42, "fault_mode": "intermittent_repeat", "fault_probability": 0.15, "signatures_per_session": 20, "rsa_keys_per_population": 12, "collection_size": 12, "key_bits": 1024, "max_regen": 3, "sample_size": 4096}
